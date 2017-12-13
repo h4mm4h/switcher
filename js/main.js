@@ -9,9 +9,9 @@
 
 	function handleView(e){
 	  // ctrl + e
-	  if (e.ctrlKey && e.keyCode === 69) showEditor();
+	  if (e.ctrlKey && e.keyCode === 69)  showEditor(); e.preventDefault();
 	  // ctrl + s
-	  if (e.ctrlKey && e.keyCode === 83) saveInputText();
+	  if (e.ctrlKey && e.keyCode === 83) saveInputText(); e.preventDefault();
 	  // esc
 	  if (e.keyCode === 27) exitEditor();
 	}
