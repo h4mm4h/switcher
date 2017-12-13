@@ -9,9 +9,9 @@
 
 	function handleView(e){
 	  // ctrl + e
-	  if (e.ctrlKey && e.keyCode === 69)  showEditor(); e.preventDefault();
+	  if (e.ctrlKey && e.keyCode === 69)  showEditor();
 	  // ctrl + s
-	  if (e.ctrlKey && e.keyCode === 83) saveInputText(); e.preventDefault();
+	  if (e.ctrlKey && e.keyCode === 83) saveInputText();
 	  // esc
 	  if (e.keyCode === 27) exitEditor();
 	}
@@ -31,7 +31,9 @@
 	}
 
 
-	document.addEventListener('keydown', handleView );
+	document.addEventListener('keydown', handleView, function(event){
+		event.preventDefault();
+	} );
 
 
 
